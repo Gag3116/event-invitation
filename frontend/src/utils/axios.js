@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5001' // 基础路径指向你的后端服务器
+  baseURL: process.env.VUE_APP_API_URL || 'http://localhost:5001'
 });
 
 // 请求拦截器，自动附加 JWT Token
